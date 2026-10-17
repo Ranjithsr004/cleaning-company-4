@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6D365"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA771C"/>
+    </linearGradient>
+    <linearGradient id="blueGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="darkRoof" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="waterDrop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67E8F9"/>
+      <stop offset="60%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left building -->
+  <polygon points="12,18 24,12 24,42 12,42" fill="url(#blueGlass)" stroke="url(#gold)" stroke-width="1.5"/>
+  <!-- Center tall building -->
+  <polygon points="26,8 38,4 38,42 26,42" fill="url(#blueGlass)" stroke="url(#gold)" stroke-width="1.5"/>
+  <!-- Right building -->
+  <polygon points="40,15 50,20 50,42 40,42" fill="url(#blueGlass)" stroke="url(#gold)" stroke-width="1.5"/>
+
+  <!-- House roof in front -->
+  <polygon points="32,24 16,38 48,38" fill="url(#darkRoof)" stroke="url(#gold)" stroke-width="2"/>
+  <!-- Golden window -->
+  <rect x="29" y="31" width="6" height="5" fill="url(#gold)" rx="0.5"/>
+
+  <!-- Golden swoosh base -->
+  <path d="M6,46 C18,38 46,38 58,46 C48,50 16,50 6,46 Z" fill="url(#gold)"/>
+  <path d="M8,48 C20,44 44,44 56,48 C46,52 18,52 8,48 Z" fill="url(#blueGlass)"/>
+
+  <!-- Water drop on right -->
+  <path d="M48,32 C48,32 55,41 55,46 C55,49.8 51.9,53 48,53 C44.1,53 41,49.8 41,46 C41,41 48,32 48,32 Z" fill="url(#waterDrop)"/>
+  <ellipse cx="46" cy="44" rx="2" ry="4" fill="#FFFFFF" opacity="0.6" transform="rotate(-20 46 44)"/>
+
+  <!-- Small green leaf accent -->
+  <path d="M52,48 C58,46 60,52 56,54 C53,55 50,51 52,48 Z" fill="#22C55E"/>
+</svg>
