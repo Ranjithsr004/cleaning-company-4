@@ -1,4 +1,4 @@
-import { Phone, Star, ShieldCheck, BadgeCheck, MessageCircle } from 'lucide-react';
+import { Phone, Star, ShieldCheck, BadgeCheck, MessageCircle, Play } from 'lucide-react';
 import { site } from '@/config/site';
 
 type Props = {
@@ -56,7 +56,7 @@ export function Hero({ onQuoteClick }: Props) {
             ))}
           </ul>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
             <a href={site.contact.phoneHref} className="btn-primary">
               <Phone className="w-4 h-4" />
               Jetzt anrufen
@@ -65,6 +65,13 @@ export function Hero({ onQuoteClick }: Props) {
               <MessageCircle className="w-4 h-4" />
               Kostenloses Angebot
             </button>
+            <a
+              href="#praxis"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold text-sm transition-all shadow-sm hover:border-[var(--brand-300)]"
+            >
+              <Play className="w-3.5 h-3.5 fill-current text-[var(--brand-600)]" />
+              Videos ansehen
+            </a>
           </div>
 
           <dl className="mt-10 grid grid-cols-4 gap-4 max-w-lg">
@@ -123,13 +130,24 @@ export function Hero({ onQuoteClick }: Props) {
             </div>
           </div>
 
-          <div className="absolute -top-5 -right-2 sm:-right-6 card py-2.5 px-4 flex items-center gap-2">
-            <ShieldCheck
-              className="w-5 h-5"
-              style={{ color: 'var(--brand-600)' }}
+          <a
+            href="#about"
+            className="absolute -top-5 -right-2 sm:-right-6 card py-2 px-3.5 flex items-center gap-2.5 shadow-md hover:shadow-lg transition-all group"
+          >
+            <img
+              src={site.contact.photo}
+              alt={site.contact.contactPerson}
+              className="w-9 h-9 rounded-full object-cover border border-slate-200 shrink-0"
             />
-            <span className="text-sm font-bold text-slate-800">Geprüft & Versichert</span>
-          </div>
+            <div className="text-left">
+              <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-[var(--brand-600)] transition-colors">
+                Inhabergeführt
+              </div>
+              <div className="text-xs font-bold text-slate-900 leading-tight">
+                {site.contact.contactPerson}
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </section>

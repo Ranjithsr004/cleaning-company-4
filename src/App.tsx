@@ -4,6 +4,7 @@ import { Hero } from '@/components/Hero';
 import { QuoteModal } from '@/components/QuoteModal';
 import { About } from '@/components/About';
 import { Services } from '@/components/Services';
+import { WorkShowcase } from '@/components/WorkShowcase';
 import { Reviews } from '@/components/Reviews';
 import { Process } from '@/components/Process';
 import { Trust } from '@/components/Trust';
@@ -36,6 +37,7 @@ function App() {
         <Hero onQuoteClick={openQuote} />
         <About onQuoteClick={openQuote} />
         <Services onQuoteClick={openQuote} />
+        <WorkShowcase onQuoteClick={openQuote} />
         <Reviews />
         <Process />
         <Trust onQuoteClick={openQuote} />

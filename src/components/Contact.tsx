@@ -97,15 +97,16 @@ export function Contact({ onQuoteClick }: Props) {
                 borderColor: 'var(--brand-200)',
               }}
             >
-              <div
-                className="grid place-items-center w-14 h-14 rounded-full text-white font-extrabold text-lg shrink-0"
-                style={{ background: 'var(--brand-500)' }}
-              >
-                {site.contact.contactPerson
-                  .split(' ')
-                  .map((n) => n[0])
-                  .join('')
-                  .slice(0, 2)}
+              <div className="relative shrink-0">
+                <img
+                  src={site.contact.photo}
+                  alt={site.contact.contactPerson}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-md"
+                />
+                <span
+                  className="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white"
+                  title="Erreichbar"
+                />
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-slate-500">

@@ -6,6 +6,11 @@
  * ============================================================
  */
 
+import ownerImg from '@/assets/owner.jpg';
+import workImg from '@/assets/photo_2026-10-24_21-44-33.jpg';
+import floorCleaningVideo from '@/assets/video_2026-10-24_21-44-08.mp4';
+import hallCleaningVideo from '@/assets/video_2026-10-24_21-44-27.mp4';
+
 export const site = {
   name: 'Yunus Gebäudereinigung & Dienstleistungen',
   shortName: 'Yunus Reinigung',
@@ -32,7 +37,9 @@ export const site = {
     emailHref: 'mailto:yunus.reinigung@gmail.com',
     address: 'Poststraße 35, 52477 Alsdorf',
     contactPerson: 'Ahmad Suleiman',
-    contactRole: 'Geschäftsführer',
+    contactRole: 'Geschäftsführer & Inhaber',
+    photo: ownerImg,
+    workPhoto: workImg,
     mapEmbed:
       'https://www.google.com/maps?q=Poststraße+35+52477+Alsdorf&output=embed',
     mapLink: 'https://www.google.com/maps?q=Poststraße+35+52477+Alsdorf',
@@ -97,8 +104,7 @@ export const services: Service[] = [
     title: 'Hausmeister-Service',
     description:
       'Zuverlässiger Hausmeisterservice für Wohn- und Gewerbeimmobilien — kleine Reparaturen, Wartung, Grünpflege und Winterdienst auf Anfrage.',
-    image:
-      'https://images.pexels.com/photos/8617719/pexels-photo-8617719.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: workImg,
   },
   {
     icon: 'Sparkles',
@@ -115,6 +121,47 @@ export const services: Service[] = [
       'Professioneller Umzugsservice mit sorgfältigem Transport Ihrer Möbel und Gegenstände — zuverlässig, pünktlich und zum fairen Preis.',
     image:
       'https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&cs=tinysrgb&w=800',
+  },
+];
+
+export type VideoItem = {
+  id: string;
+  title: string;
+  badge: string;
+  equipment: string;
+  description: string;
+  video: string;
+  highlights: string[];
+};
+
+export const videoShowcase: VideoItem[] = [
+  {
+    id: 'hallenreinigung',
+    title: 'Industrie- & Hallenreinigung in der Höhe',
+    badge: 'Industriereinigung & Höhenarbeit',
+    equipment: 'Scheren-Hebebühne im Einsatz',
+    description:
+      'Professionelle Reinigung von Deckenkonstruktionen, Hallenträgern, Hochfenstern und Großflächen mit eigener Scheren-Hebebühne. Für spiegelblanke Böden und kompromisslose Sauberkeit in Gewerbe- & Industrieobjekten.',
+    video: hallCleaningVideo,
+    highlights: [
+      'Arbeitshöhen bis über 10 Meter sicher erreichbar',
+      'Industriehallen, Logistikzentren & Gewerbeobjekte',
+      'Streifenfreie Großglasflächen & glänzendes Finish',
+    ],
+  },
+  {
+    id: 'grundreinigung',
+    title: 'Maschinelle Tiefen- & Grundreinigung',
+    badge: 'Bodenpflege & Spezialreinigung',
+    equipment: 'Professionelle Einscheibenmaschine',
+    description:
+      'Intensive maschinelle Nassreinigung von Fliesen, Stein und beanspruchten Böden mit kraftvoller Einscheibenmaschine und Spezialreinigern — beseitigt auch tiefsitzenden Schmutz und hartnäckige Rückstände.',
+    video: floorCleaningVideo,
+    highlights: [
+      'Rotierende Scheuertechnik für porentiefe Hygiene',
+      'Effektiver Spezialschaum gegen hartnäckige Verschmutzungen',
+      'Schonend für empfindliche Fugen & Beläge',
+    ],
   },
 ];
 
@@ -203,9 +250,10 @@ export const faqs: Faq[] = [
 
 export const nav = [
   { label: 'Startseite', href: '#home' },
-  { label: 'Leistungen', href: '#services' },
-  { label: 'Bewertungen', href: '#reviews' },
   { label: 'Über uns', href: '#about' },
+  { label: 'Leistungen', href: '#services' },
+  { label: 'Einblicke', href: '#praxis' },
+  { label: 'Bewertungen', href: '#reviews' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Kontakt', href: '#contact' },
 ];

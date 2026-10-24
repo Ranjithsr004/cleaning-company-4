@@ -129,16 +129,31 @@ export function QuoteModal({ open, onClose }: Props) {
               <X className="w-5 h-5" />
             </button>
           </div>
+
+          <div className="mt-3 flex items-center gap-3 p-2.5 rounded-xl bg-slate-50 border border-slate-200/80">
+            <img
+              src={site.contact.photo}
+              alt={site.contact.contactPerson}
+              className="w-9 h-9 rounded-full object-cover border border-white shadow-sm shrink-0"
+            />
+            <div className="text-xs text-slate-600">
+              <span className="font-bold text-slate-900">{site.contact.contactPerson}</span> ({site.contact.contactRole}) prüft jede Anfrage persönlich.
+            </div>
+          </div>
         </div>
 
         <div className="px-6 sm:px-8 py-6">
           {status === 'success' ? (
             <div className="text-center py-8 animate-fade-in">
-              <div
-                className="mx-auto grid place-items-center w-16 h-16 rounded-full text-white"
-                style={{ background: 'var(--brand-500)' }}
-              >
-                <CheckCircle2 className="w-9 h-9" />
+              <div className="relative inline-block mx-auto mb-4">
+                <img
+                  src={site.contact.photo}
+                  alt={site.contact.contactPerson}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-emerald-500 shadow-md"
+                />
+                <span className="absolute -bottom-1 -right-1 grid place-items-center w-6 h-6 rounded-full bg-emerald-500 text-white">
+                  <CheckCircle2 className="w-4 h-4" />
+                </span>
               </div>
               <h3 className="mt-5 text-xl font-extrabold text-slate-900">
                 Anfrage bereit zum Versenden!
