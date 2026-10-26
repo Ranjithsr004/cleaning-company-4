@@ -32,11 +32,10 @@ export function Header({ onQuoteClick }: Props) {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-[0_4px_24px_-12px_rgba(15,23,42,0.18)] border-b border-slate-100'
-          : 'bg-white/0'
-      }`}
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
+        ? 'bg-white/90 backdrop-blur-md shadow-[0_4px_24px_-12px_rgba(15,23,42,0.18)] border-b border-slate-100'
+        : 'bg-white/0'
+        }`}
     >
       <div className="container-x flex items-center justify-between h-18 py-3">
         <a
@@ -56,7 +55,7 @@ export function Header({ onQuoteClick }: Props) {
             <span className="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 group-hover:text-[var(--brand-600)] transition-colors">
               {site.shortName}
             </span>
-            <span className="text-[10px] font-bold tracking-wider text-slate-500">
+            <span className="text-[12px] font-bold tracking-wider text-slate-500">
               Gebäudereinigung & Dienstleistungen
             </span>
           </span>

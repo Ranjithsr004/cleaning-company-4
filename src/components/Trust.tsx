@@ -9,7 +9,7 @@ const reasons = [
   {
     icon: ShieldCheck,
     title: 'Offiziell registriert & versichert',
-    text: `Registriert beim Finanzamt Aachen-Kreis (St.-Nr. ${site.legal.taxNumber}, USt-IdNr. ${site.legal.vatId}) mit umfassender Haftpflichtversicherung für Ihren Schutz.`,
+    text: `Registriert beim Finanzamt Achen-Kreis (St.-Nr. ${site.legal.taxNumber}, USt-IdNr. ${site.legal.vatId}) mit umfassender Haftpflichtversicherung für Ihren Schutz.`,
   },
   {
     icon: CalendarClock,

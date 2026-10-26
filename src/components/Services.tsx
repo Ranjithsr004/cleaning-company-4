@@ -27,11 +27,11 @@ export function Services({ onQuoteClick }: Props) {
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s) => (
             <article key={s.title} className="card overflow-hidden group flex flex-col">
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative aspect-square overflow-hidden bg-slate-100">
                 <img
                   src={s.image}
                   alt={s.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                   loading="lazy"
                   onError={(e) => {
                     const img = e.currentTarget as HTMLImageElement;
@@ -46,24 +46,19 @@ export function Services({ onQuoteClick }: Props) {
                     }
                   }}
                 />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      'linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(10,50,90,0.6))',
-                  }}
-                />
-                <div
-                  className="absolute top-3 left-3 grid place-items-center w-10 h-10 rounded-xl text-white shadow-md backdrop-blur-sm"
-                  style={{ background: 'rgba(10,102,194,0.9)' }}
-                >
-                  <ServiceIcon name={s.icon} className="w-5 h-5" />
-                </div>
               </div>
 
               <div className="p-5 flex flex-col flex-1">
-                <h3 className="font-bold text-slate-900 text-lg">{s.title}</h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed flex-1">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="grid place-items-center w-10 h-10 rounded-xl text-white shrink-0 shadow-sm"
+                    style={{ background: 'var(--brand-600)' }}
+                  >
+                    <ServiceIcon name={s.icon} className="w-5 h-5" />
+                  </div>
+                  <h3 className="font-bold text-slate-900 text-lg leading-snug">{s.title}</h3>
+                </div>
+                <p className="mt-3 text-sm text-slate-600 leading-relaxed flex-1">
                   {s.description}
                 </p>
                 <button

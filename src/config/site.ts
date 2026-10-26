@@ -10,16 +10,20 @@ import ownerImg from '@/assets/owner.jpg';
 import workImg from '@/assets/photo_2026-10-24_21-44-33.jpg';
 import floorCleaningVideo from '@/assets/video_2026-10-24_21-44-08.mp4';
 import hallCleaningVideo from '@/assets/video_2026-10-24_21-44-27.mp4';
+import gebaeudereinigungImg from '@/assets/gebaudereinigung.jpg';
+import winterdienstImg from '@/assets/winterdienst.jpg';
+import umzugImg from '@/assets/umzug.jpg';
+import grunpflegeImg from '@/assets/grunpflege.jpg';
 
 export const site = {
   name: 'Yunus Gebäudereinigung & Dienstleistungen',
-  shortName: 'Yunus Reinigung',
+  shortName: 'YUNUS Reinigung',
   tagline: 'Sauberkeit, auf die Sie sich verlassen können.',
   city: 'Alsdorf',
-  region: 'Aachen-Kreis',
+  region: 'Achen-Kreis',
   serviceArea: [
     'Alsdorf',
-    'Aachen',
+    'Achen',
     'Herzogenrath',
     'Eschweiler',
     'Baesweiler',
@@ -48,7 +52,7 @@ export const site = {
   legal: {
     vatId: 'DE463836813',
     taxNumber: '202/5141/3479',
-    taxOffice: 'Finanzamt Aachen-Kreis',
+    taxOffice: 'Finanzamt Achen-Kreis',
     website: 'www.yunus-reinigung.de',
   },
 
@@ -96,31 +100,28 @@ export const services: Service[] = [
     title: 'Fensterreinigung',
     description:
       'Streifenfreie Innen- und Außenreinigung von Fenstern für Geschäfte, Büros und mehrstöckige Gebäude mit professionellem Equipment.',
-    image:
-      'https://images.pexels.com/photos/4239133/pexels-photo-4239133.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: gebaeudereinigungImg,
   },
   {
     icon: 'Wrench',
     title: 'Hausmeister-Service',
     description:
       'Zuverlässiger Hausmeisterservice für Wohn- und Gewerbeimmobilien — kleine Reparaturen, Wartung, Grünpflege und Winterdienst auf Anfrage.',
-    image: workImg,
+    image: grunpflegeImg,
   },
   {
     icon: 'Sparkles',
     title: 'Weitere Dienstleistungen',
     description:
       'Grundreinigungen, Baureinigungen, Sonderreinigungen und maßgeschneiderte Dienstleistungen — wir passen uns Ihren individuellen Anforderungen an.',
-    image:
-      'https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: winterdienstImg,
   },
   {
     icon: 'Truck',
     title: 'Umzug',
     description:
       'Professioneller Umzugsservice mit sorgfältigem Transport Ihrer Möbel und Gegenstände — zuverlässig, pünktlich und zum fairen Preis.',
-    image:
-      'https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: umzugImg,
   },
 ];
 
@@ -175,7 +176,7 @@ export type Review = {
 export const reviews: Review[] = [
   {
     name: 'Klaus M.',
-    role: 'Büroleiter, Anwaltskanzlei Aachen',
+    role: 'Büroleiter, Anwaltskanzlei Achen',
     rating: 5,
     quote:
       'Yunus Reinigung säubert unser Büro seit einem Jahr. Pünktlich, zuverlässig und das Ergebnis ist jeden Morgen makellos. Bestes Reinigungsunternehmen, das wir je hatten.',
@@ -224,7 +225,7 @@ export const faqs: Faq[] = [
   {
     question: 'Sind Sie versichert und angemeldet?',
     answer:
-      'Ja. Yunus Gebäudereinigung ist beim Finanzamt Aachen-Kreis unter der Steuernummer 202/5141/3479 registriert und verfügt über eine gültige Umsatzsteuer-ID (DE463836813). Wir arbeiten vollständig legal und transparent.',
+      'Ja. Yunus Gebäudereinigung ist beim Finanzamt Achen-Kreis unter der Steuernummer 202/5141/3479 registriert und verfügt über eine gültige Umsatzsteuer-ID (DE463836813). Wir arbeiten vollständig legal und transparent.',
   },
   {
     question: 'Bieten Sie auch Einmalreinigungen oder Grundreinigungen an?',
